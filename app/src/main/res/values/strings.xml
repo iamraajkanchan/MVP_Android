@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MVP_Android</string>
+    <string name="buttonText">Next</string>
+    <string name="heading">MVP Architecture Pattern</string>
+    <string name="subHeading">Hello World!!!</string>
+    <string name="description">Description</string>
+</resources>
