@@ -3,7 +3,7 @@ package com.example.mvp_android
 class Presenter(private var mainView : Contract.View? , private val model : Contract.Model) :
     Contract.Presenter , Contract.Model.OnFinished
 {
-    override fun onButtonClick()
+    override fun onNextClick()
     {
         if (mainView != null)
         {

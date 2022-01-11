@@ -1,7 +1,7 @@
 package com.example.mvp_android
 
+import android.os.*
 import java.util.*
-import java.util.logging.Handler
 
 class Model : Contract.Model
 {
@@ -15,7 +15,7 @@ class Model : Contract.Model
 
     override fun goNext(onFinished : Contract.Model.OnFinished)
     {
-        android.os.Handler().postDelayed({
+        Handler(Looper.getMainLooper()).postDelayed({
             onFinished.finish(getRandomString)
         } , 1200)
     }

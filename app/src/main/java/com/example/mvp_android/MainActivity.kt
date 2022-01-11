@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() , Contract.View
         setContentView(R.layout.activity_main)
         presenter = Presenter(this , Model())
         btnNext.setOnClickListener {
-            presenter !!.onButtonClick()
+            presenter !!.onNextClick()
         }
     }
 
@@ -33,5 +33,11 @@ class MainActivity : AppCompatActivity() , Contract.View
     override fun setString(string : String?)
     {
         textView !!.text = string
+    }
+
+    override fun onDestroy()
+    {
+        super.onDestroy()
+        presenter !!.onDestroy()
     }
 }
